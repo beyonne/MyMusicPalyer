@@ -55,7 +55,7 @@ public class MusicListAdapter extends BaseAdapter {
             viewHolder.musicTitle = (TextView) convertView.findViewById(R.id.name);
             viewHolder.musicDuration = (TextView) convertView.findViewById(R.id.time);
 //            viewHolder.musicArtist = (TextView) convertView.findViewById(R.id.actor);
-            viewHolder.musicPath = convertView.findViewById(R.id.actor);
+            viewHolder.musicPath = convertView.findViewById(R.id.path);
             convertView.setTag(viewHolder);			//表示给View添加一个格外的数据，
         } else {
             viewHolder = (ViewHolder)convertView.getTag();//通过getTag的方法将数据取出来

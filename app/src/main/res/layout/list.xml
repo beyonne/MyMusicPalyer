@@ -17,18 +17,17 @@
             android:id="@+id/time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/actor"
-            android:layout_alignBottom="@+id/actor"
+            android:layout_alignBottom="@+id/path"
             android:layout_alignParentRight="true"
             android:layout_marginRight="28dp"
             android:text="time" />
 
         <TextView
-            android:id="@+id/actor"
+            android:id="@+id/path"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignLeft="@+id/name"
             android:layout_below="@+id/name"
-            android:text="actor" />
+            android:text="path" />
 
 </RelativeLayout>

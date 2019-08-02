@@ -54,14 +54,16 @@ public class MusicListAdapter extends BaseAdapter {
             convertView = LayoutInflater.from(context).inflate(R.layout.list, null);
             viewHolder.musicTitle = (TextView) convertView.findViewById(R.id.name);
             viewHolder.musicDuration = (TextView) convertView.findViewById(R.id.time);
-            viewHolder.musicArtist = (TextView) convertView.findViewById(R.id.actor);
+//            viewHolder.musicArtist = (TextView) convertView.findViewById(R.id.actor);
+            viewHolder.musicPath = convertView.findViewById(R.id.actor);
             convertView.setTag(viewHolder);			//表示给View添加一个格外的数据，
         } else {
             viewHolder = (ViewHolder)convertView.getTag();//通过getTag的方法将数据取出来
         }
         musicInfo = musicInfos.get(position);
         viewHolder.musicTitle.setText(musicInfo.getTitle());		//显示标题
-        viewHolder.musicArtist.setText(musicInfo.getArtist());		//显示艺术家
+//        viewHolder.musicArtist.setText(musicInfo.getArtist());		//显示艺术家
+        viewHolder.musicPath.setText(musicInfo.getUrl());
         viewHolder.musicDuration.setText(MusicUtil.formatTime(musicInfo.getDuration()));//显示时长
 
         return convertView;
@@ -78,5 +80,6 @@ public class MusicListAdapter extends BaseAdapter {
         public TextView musicTitle;		//音乐标题
         public TextView musicDuration;	//音乐时长
         public TextView musicArtist;	//音乐艺术家
+        public TextView musicPath;	//文件路径
     }
 }

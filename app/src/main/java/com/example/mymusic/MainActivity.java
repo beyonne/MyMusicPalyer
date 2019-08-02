@@ -25,6 +25,4 @@ public class MainActivity extends AppCompatActivity {
         Listadapter = new MusicListAdapter(this, musicInfos);
         listview.setAdapter(Listadapter);
     }
-
-
 }

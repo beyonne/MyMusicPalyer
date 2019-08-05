@@ -26,7 +26,6 @@ public class MusicListAdapter extends BaseAdapter {
         this.musicInfos = mp3Infos;
     }
 
-
     @Override
     public int getCount() {
         // TODO Auto-generated method stub

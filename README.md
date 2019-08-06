@@ -2,6 +2,7 @@
 my first andriod app designed by myself,a singer native music player
 V1.0.2   20190806
 １增加ListView单个项目点击事件，并取得该项目的绝对路径；
+２单击条目弹出新界面；
 
 
 V1.0.1   20190802

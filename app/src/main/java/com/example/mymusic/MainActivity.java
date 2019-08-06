@@ -2,6 +2,7 @@ package com.example.mymusic;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
@@ -33,7 +34,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 String tr = musicInfos.get(i).getUrl();//获取绝对路径
-                Toast.makeText(MainActivity.this,"Path:"+ tr,Toast.LENGTH_SHORT).show();
+//                Toast.makeText(MainActivity.this,"Path:"+ tr,Toast.LENGTH_SHORT).show();
+                Intent intent=new Intent(MainActivity.this,MusicActivity.class);
+                startActivity(intent);
             }
         });
     }

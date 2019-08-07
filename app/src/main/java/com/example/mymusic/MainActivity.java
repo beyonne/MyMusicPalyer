@@ -3,10 +3,12 @@ package com.example.mymusic;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -36,9 +38,9 @@ public class MainActivity extends AppCompatActivity {
                 String tr = musicInfos.get(i).getUrl();//获取绝对路径
 //                Toast.makeText(MainActivity.this,"Path:"+ tr,Toast.LENGTH_SHORT).show();
                 Intent intent=new Intent(MainActivity.this,MusicActivity.class);
+                intent.putExtra("data",tr);
                 startActivity(intent);
             }
         });
     }
-//    listview.setOnItemClickLi
 }

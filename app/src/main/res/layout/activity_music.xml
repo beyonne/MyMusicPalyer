@@ -4,9 +4,61 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
+    <Button
+        android:id="@+id/Back"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:text="新世界"
+        android:text="返回"
         />
+
+    <Button
+        android:id="@+id/Play"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="播放"
+        />
+    <Button
+        android:id="@+id/Stop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="停止"
+        />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/LastMusic"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="上一曲"
+            />
+        <Button
+            android:id="@+id/NextMusic"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="下一曲"
+            />
+    </LinearLayout>
+
+    <Spinner
+        android:id="@+id/Radio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/Ratio"
+        android:spinnerMode="dialog"
+        />
+
+    <TextView
+        android:id="@+id/Path"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:text="第一个音乐播放器即将横空出世！"
+        />
+
+
 </LinearLayout>

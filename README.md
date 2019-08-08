@@ -1,5 +1,10 @@
 # MyMusicPalyer
 my first andriod app designed by myself,a singer native music player
+V1.0.4   20190808
+１解决点击停止按钮无法再重新播放问题，每次按下停止按钮后，重新prepare后再启动播放；
+２增加可读权限判断，如未取得可读权限直接退出程序；
+３增加进度条及时间显示，未完善；
+
 
 V1.0.3   20190807
 １解决闪退问题，原因为增加新的Acitivity时未在Manifest.xml文件注册，添加注册后不再闪退；

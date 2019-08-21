@@ -1,5 +1,10 @@
 # MyMusicPalyer
 my first andriod app designed by myself,a singer native music player
+
+V1.0.5   20190819
+１完善播放进度条功能，增加总时间及耗时显示；
+
+
 V1.0.4   20190808
 １解决点击停止按钮无法再重新播放问题，每次按下停止按钮后，重新prepare后再启动播放；
 ２增加可读权限判断，如未取得可读权限直接退出程序；

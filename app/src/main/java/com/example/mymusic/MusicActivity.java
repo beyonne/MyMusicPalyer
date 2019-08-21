@@ -90,8 +90,10 @@ public class MusicActivity extends Activity {
         seekBar.setMax(player.getDuration());
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
-            public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
-
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromTouch) {
+                if (fromTouch) {
+                    player.seekTo(progress);
+                }
             }
 
             @Override
@@ -104,7 +106,6 @@ public class MusicActivity extends Activity {
 
             }
         });
-
 
         RatioSpinner = findViewById(R.id.Radio);
         //打开界面就会默认自动执行一次
@@ -127,7 +128,6 @@ public class MusicActivity extends Activity {
 
             }
         });
-
 
         Button backbtn = findViewById(R.id.Back);
         backbtn.setOnClickListener(new View.OnClickListener() {
@@ -190,6 +190,32 @@ public class MusicActivity extends Activity {
             }
         });
     }
+
+//    private Thread thread = new Thread(){
+//        @Override
+//        public void run() {
+//            while(player.isPlaying())
+//            {
+//                try {
+//                    sleep(100);
+//                } catch (InterruptedException e) {
+//                    e.printStackTrace();
+//                }
+//            }
+//        }
+//    };
+//
+//    private Handler handler = new Handler(){
+//        @Override
+//        public void handleMessage(Message msg) {
+//            if (player.isPlaying())
+//            {
+//                long duration = player.getDuration();
+//                long pos = player.getCurrentPosition();
+//                seekBar.setProgress((int)(1000*pos/duration));
+//            }
+//        }
+//    };
 
     @Override
     protected void onDestroy() {
